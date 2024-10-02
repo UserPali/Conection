@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true">
+    <div class="table-container" *ngIf="clientes.length > 0">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>RUTA_VENTA</th>
+            <th>RUTA_DESPACHO</th>
+            <th>ESTADO</th>
+            <th>RUTA DE VENTA</th>
+            <!-- Añade más encabezados según los datos que tengas -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.ID_CLIENTE }}</td>
+            <td>{{ cliente.RUTA_VENTA }}</td>
+            <td>{{ cliente.RUTA_DESPACHO }}</td>
+            <td>{{ cliente.GPS_LONGITUD }}</td>
+            <td>{{ cliente.GPS_LATITUD }}</td>
+            <!-- Añade más columnas según los datos que tengas -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-content>
